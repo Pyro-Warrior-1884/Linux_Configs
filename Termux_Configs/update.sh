@@ -22,15 +22,15 @@ ITEMS=(
 
 for item in "${ITEMS[@]}"; do
     if [ -e "$item" ]; then
-        cp -rf "$item" "$DEST/" || problem_occurred=1
-        cp -rf "$item" "$REPO_DEST/" || problem_occurred=1
+        rsync -a --update "$item" "$DEST/" || problem_occurred=1
+        rsync -a --update "$item" "$REPO_DEST/" || problem_occurred=1
     else
         problem_occurred=1
     fi
 done
 
 if [ -e "$HOME/.ssh" ]; then
-    cp -rf "$HOME/.ssh" "$DEST/" || problem_occurred=1
+    rsync -a --update "$HOME/.ssh" "$DEST/" || problem_occurred=1
 else
     problem_occurred=1
 fi
@@ -40,7 +40,7 @@ cd "$REPO" || {
     exit 1
 }
 
-git add . || problem_occurred=1
+git add -A || problem_occurred=1
 
 if ! git diff --cached --quiet; then
     git commit -m "feat: updated termux config files" || problem_occurred=1
