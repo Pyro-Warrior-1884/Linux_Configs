@@ -3,8 +3,8 @@
 set -e
 
 if [ $# -lt 1 ]; then
-        echo "Usage: send <recipient@gmail.com>"
-            exit 1
+    echo "Usage: send <recipient@gmail.com>"
+    exit 1
 fi
 
 RECIPIENT="$1"
@@ -15,79 +15,92 @@ read -r SUBJECT
 BODY_FILE="$(mktemp)"
 vim "$BODY_FILE"
 
-echo
-echo "Select an attachment from the current directory (Press Esc to skip)"
-echo
+ATTACHMENT=""
 
-ATTACHMENT=$(
-    find "$PWD" -type f 2>/dev/null | \
-        fzf \
-            --height=40% \
+echo
+printf "Add an attachment? [y/N]: "
+read -r ADD_ATTACHMENT
+
+case "$ADD_ATTACHMENT" in
+    y|Y)
+    echo
+    echo "Select an attachment from the current directory"
+    echo
+
+    ATTACHMENT=$(
+        find "$PWD" -type f 2>/dev/null | \
+            fzf \
+                --height=40% \
                 --border \
-                    --prompt="Attachment > "
-                )
+                --prompt="Attachment > "
+    )
+    ;;
+*)
+    ATTACHMENT=""
+    ;;
+esac
 
+echo
+echo "────────────────────────────────────────"
+echo "             MAIL PREVIEW"
+echo "────────────────────────────────────────"
+echo
+echo "To      : $RECIPIENT"
+echo "Subject : $SUBJECT"
+echo
+echo "Body"
+echo "────────────────────────────────────────"
 
-                echo "────────────────────────────────────────"
-                echo "             MAIL PREVIEW"
-                echo "────────────────────────────────────────"
-                echo
-                echo "To      : $RECIPIENT"
-                echo "Subject : $SUBJECT"
-                echo
-                echo "Body"
-                echo "────────────────────────────────────────"
+cat "$BODY_FILE"
 
-                cat "$BODY_FILE"
+echo
+echo "────────────────────────────────────────"
 
-                echo
-                echo "────────────────────────────────────────"
+if [ -n "$ATTACHMENT" ]; then
+    echo
+    echo "Attachment:"
+    echo "  ✓ $ATTACHMENT"
+else
+    echo
+    echo "Attachment: None"
+fi
 
-                if [ -n "$ATTACHMENT" ]; then
-                        echo
-                            echo "Attachment:"
-                                echo "  ✓ $ATTACHMENT"
-                            else
-                                    echo
-                                        echo "Attachment: None"
-                fi
+echo
+echo "────────────────────────────────────────"
+printf "Send? [y/N]: "
+read -r CONFIRM
 
-                echo
-                echo "────────────────────────────────────────"
-                printf "Send? [y/N]: "
-                read -r CONFIRM
+case "$CONFIRM" in
+    y|Y)
+    echo
+    echo "Sending..."
+    echo
 
-                case "$CONFIRM" in
-                        y|Y)
-                                    echo
-                                            echo "Sending..."
-                                                    echo
+    if [ -n "$ATTACHMENT" ]; then
+        mutt \
+            -s "$SUBJECT" \
+            -a "$ATTACHMENT" \
+            -- "$RECIPIENT" < "$BODY_FILE"
+    else
+        mutt \
+            -s "$SUBJECT" \
+            -- "$RECIPIENT" < "$BODY_FILE"
+    fi
 
-                                                            if [ -n "$ATTACHMENT" ]; then
-                                                                            mutt \
-                                                                                                -s "$SUBJECT" \
-                                                                                                                -a "$ATTACHMENT" \
-                                                                                                                                -- "$RECIPIENT" < "$BODY_FILE"
-                                                                                    else
-                                                                                                    mutt \
-                                                                                                                        -s "$SUBJECT" \
-                                                                                                                                        -- "$RECIPIENT" < "$BODY_FILE"
-                                                                                                            fi
+	STATUS=$?
+	
+	echo
+	
+	if [ "$STATUS" -eq 0 ]; then
+	    echo "✓ Mail sent successfully."
+	else
+	    echo "✗ Failed to send mail."
+	fi
+	;;
+   *)
+	echo
+	echo "Cancelled."
+	;;
+esac
 
-                                                                                                                    STATUS=$?
-
-                                                                                                                            echo
-
-                                                                                                                                    if [ "$STATUS" -eq 0 ]; then
-                                                                                                                                                    echo "✓ Mail sent successfully."
-                                                                                                                                                            else
-                                                                                                                                                                            echo "✗ Failed to send mail."
-                                                                                                                                                                                    fi
-                                                                                                                                                                                            ;;
-                                                                                                                                                                                                *)
-                                                                                                                                                                                                            echo
-                                                                                                                                                                                                                    echo "Cancelled."
-                                                                                                                                                                                                                            ;;
-                                                                                                                                                                                                                    esac
-
-                                                                                                                                                                                                                    rm -f "$BODY_FILE"
+rm -f "$BODY_FILE"

@@ -7,3 +7,4 @@ alias lg='lazygit'
 
 clear
 toilet -f future -F metal -F border "Albert is Here!"
+source ~/.secrets
