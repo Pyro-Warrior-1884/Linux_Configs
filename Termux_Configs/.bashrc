@@ -8,3 +8,9 @@ alias lg='lazygit'
 clear
 toilet -f future -F metal -F border "Albert is Here!"
 source ~/.secrets
+
+alias cls='clear'
+alias lss='eza -lah'
+
+clear
+toilet -f future -F metal -F border "Albert is Here!"

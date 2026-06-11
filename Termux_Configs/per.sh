@@ -5,10 +5,13 @@ pkg update -y
 pkg upgrade -y
 
 echo "=== Installing required packages ==="
-pkg install -y fzf zoxide bat eza toilet curl ripgrep git msmtp fastfetch lazygit mandoc mutt
 
-echo "=== Installing Starship ==="
-curl -sS https://starship.rs/install.sh | sh -s -- -y
+while IFS= read -r package; do
+    [[ -z "$package" || "$package" == \#* ]] && continue
+
+    echo "Installing: $package"
+    pkg install -y "$package"
+done < "$HOME/packages"
 
 echo "=== Backing up .bashrc ==="
 cp ~/.bashrc ~/.bashrc.backup_$(date +%F_%H%M%S)

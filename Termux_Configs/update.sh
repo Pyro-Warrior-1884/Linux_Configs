@@ -11,6 +11,7 @@ problem_occurred=0
 
 ITEMS=(
     "$HOME/.bashrc"
+    "$HOME/packages"
     "$HOME/.msmtprc"
     "$HOME/.muttrc"
     "$HOME/.vimrc"
