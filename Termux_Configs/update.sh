@@ -30,7 +30,7 @@ for item in "${ITEMS[@]}"; do
 done
 
 if [ -e "$HOME/.ssh" ]; then
-    rsync -a --update "$HOME/.ssh" "$DEST/" || problem_occurred=1
+    cp -rf "$HOME/.ssh" "$DEST/" || problem_occurred=1
 else
     problem_occurred=1
 fi
