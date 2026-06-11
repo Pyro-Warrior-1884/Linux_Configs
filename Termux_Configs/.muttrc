@@ -1,0 +1,4 @@
+set sendmail="/data/data/com.termux/files/usr/bin/msmtp"
+set use_from=yes
+set envelope_from=yes
+set editor="vim"

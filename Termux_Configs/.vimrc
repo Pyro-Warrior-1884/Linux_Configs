@@ -1,0 +1,9 @@
+syntax on
+set number
+set cursorline
+set termguicolors
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+colorscheme zaibatsu
