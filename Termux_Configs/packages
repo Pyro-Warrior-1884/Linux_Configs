@@ -13,3 +13,10 @@ mandoc
 mutt
 rsync
 starship
+clang
+make
+python
+gdb
+strace
+lldb
+binutils
