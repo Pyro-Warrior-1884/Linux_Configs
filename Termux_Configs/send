@@ -15,30 +15,54 @@ read -r SUBJECT
 BODY_FILE="$(mktemp)"
 vim "$BODY_FILE"
 
-ATTACHMENT=""
+ATTACHMENTS=()
 
-echo
-printf "Add an attachment? [y/N]: "
-read -r ADD_ATTACHMENT
-
-case "$ADD_ATTACHMENT" in
-    y|Y)
+while true; do
     echo
-    echo "Select an attachment from the current directory"
-    echo
+    printf "Add an attachment? [y/N]: "
+    read -r ADD_ATTACHMENT
 
-    ATTACHMENT=$(
-        find "$PWD" -type f 2>/dev/null | \
-            fzf \
-                --height=40% \
-                --border \
-                --prompt="Attachment > "
-    )
-    ;;
-*)
-    ATTACHMENT=""
-    ;;
-esac
+    case "$ADD_ATTACHMENT" in
+        y|Y)
+            echo
+            echo "Select an attachment from the current directory"
+            echo
+
+            FILE=$(
+                find "$PWD" -type f 2>/dev/null | \
+                    fzf \
+                        --height=40% \
+                        --border \
+                        --prompt="Attachment > "
+                        )
+
+            [ -z "$FILE" ] && continue
+
+            DUPLICATE=0
+
+            for f in "${ATTACHMENTS[@]}"; do
+                if [ "$f" = "$FILE" ]; then
+                    DUPLICATE=1
+                    break
+                fi
+            done
+
+            if [ "$DUPLICATE" -eq 1 ]; then
+                echo
+                echo "⚠ Already attached:"
+                echo "  $FILE"
+            else
+                ATTACHMENTS+=("$FILE")
+                echo
+                echo "✓ Attached:"
+                echo "  $FILE"
+            fi
+        ;;
+        *)
+        break
+        ;;
+    esac
+done
 
 echo
 echo "────────────────────────────────────────"
@@ -56,12 +80,13 @@ cat "$BODY_FILE"
 echo
 echo "────────────────────────────────────────"
 
-if [ -n "$ATTACHMENT" ]; then
-    echo
-    echo "Attachment:"
-    echo "  ✓ $ATTACHMENT"
+echo
+if [ "${#ATTACHMENTS[@]}" -gt 0 ]; then
+    echo "Attachments:"
+        for file in "${ATTACHMENTS[@]}"; do
+        echo "  ✓ $file"
+    done
 else
-    echo
     echo "Attachment: None"
 fi
 
@@ -76,10 +101,10 @@ case "$CONFIRM" in
     echo "Sending..."
     echo
 
-    if [ -n "$ATTACHMENT" ]; then
+    if [ "${#ATTACHMENTS[@]}" -gt 0 ]; then
         mutt \
             -s "$SUBJECT" \
-            -a "$ATTACHMENT" \
+            -a "${ATTACHMENTS[@]}" \
             -- "$RECIPIENT" < "$BODY_FILE"
     else
         mutt \
@@ -87,15 +112,16 @@ case "$CONFIRM" in
             -- "$RECIPIENT" < "$BODY_FILE"
     fi
 
-	STATUS=$?
-	
-	echo
-	
-	if [ "$STATUS" -eq 0 ]; then
-	    echo "✓ Mail sent successfully."
-	else
-	    echo "✗ Failed to send mail."
-	fi
+    STATUS=$?
+
+    echo
+
+    if [ "$STATUS" -eq 0 ]; then
+        echo "✓ Mail sent successfully."
+        echo "🕒 $(date '+%d-%m-%Y %H:%M:%S')"
+    else
+        echo "✗ Failed to send mail."
+    fi
 	;;
    *)
 	echo
