@@ -16,6 +16,7 @@ ITEMS=(
     "$HOME/.muttrc"
     "$HOME/.vimrc"
     "$PREFIX/bin/send"
+    "$PREFIX/bin/ai"
     "$HOME/HQ/etcp/per.sh"
     "$HOME/.config/starship.toml"
     "$HOME/HQ/etcp/update.sh"

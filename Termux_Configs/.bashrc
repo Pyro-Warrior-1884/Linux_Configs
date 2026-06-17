@@ -5,6 +5,7 @@ alias cls='clear'
 alias lss='eza -lah'
 alias lg='lazygit'
 alias mail='neomutt'
+alias genp='openssl rand -base64 24'
 
 source ~/.secrets
 

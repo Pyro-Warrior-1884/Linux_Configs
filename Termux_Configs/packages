@@ -24,3 +24,8 @@ neomutt
 wget
 cmake
 aria2
+openssh
+lynx
+fortune
+traceroute
+dnsutils
