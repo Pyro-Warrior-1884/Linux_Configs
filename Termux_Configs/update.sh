@@ -31,7 +31,7 @@ else
 fi
 
 cd "$REPO" || {
-    echo "Successfully pushed with complications."
+    echo "Successfully Pushed with Complications!."
     exit 1
 }
 
@@ -45,5 +45,5 @@ fi
 if [ "$problem_occurred" -eq 0 ]; then
     echo "Successfully pushed."
 else
-   echo "Successfully pushed with complications."
+   echo "Successfully Pushed."
 fi

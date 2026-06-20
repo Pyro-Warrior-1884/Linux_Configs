@@ -4,10 +4,14 @@ case "$1" in
     -p)
         shift
         echo "$*" >> "$HOME/packages"
+        echo "Added Package Success:"
+        tail -n 1 "$HOME/packages"
         ;;
     -f)
         shift
         echo "$*" >> "$HOME/filez"
+        echo "Added File Success:"
+        tail -n 1 "$HOME/filez"
         ;;
     *)
         echo "Usage: $(basename "$0") {-p|-f} text"
