@@ -1,0 +1,16 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+case "$1" in
+    -p)
+        shift
+        echo "$*" >> "$HOME/packages"
+        ;;
+    -f)
+        shift
+        echo "$*" >> "$HOME/filez"
+        ;;
+    *)
+        echo "Usage: $(basename "$0") {-p|-f} text"
+        exit 1
+        ;;
+esac
