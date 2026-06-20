@@ -9,20 +9,13 @@ mkdir -p "$REPO_DEST"
 
 problem_occurred=0
 
-ITEMS=(
-    "$HOME/.bashrc"
-    "$HOME/packages"
-    "$HOME/.msmtprc"
-    "$HOME/.muttrc"
-    "$HOME/.vimrc"
-    "$PREFIX/bin/send"
-    "$PREFIX/bin/ai"
-    "$HOME/HQ/etcp/per.sh"
-    "$HOME/.config/starship.toml"
-    "$HOME/HQ/etcp/update.sh"
-)
+FILEZ="$HOME/filez"
+
+mapfile -t ITEMS < "$FILEZ"
 
 for item in "${ITEMS[@]}"; do
+    eval "item=\"$item\""
+
     if [ -e "$item" ]; then
         rsync -a --update "$item" "$DEST/" || problem_occurred=1
         rsync -a --update "$item" "$REPO_DEST/" || problem_occurred=1

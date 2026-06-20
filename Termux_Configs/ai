@@ -2,9 +2,12 @@
 
 MODEL="$HOME/HQ/Codes/llama.cpp/models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf"
 
+PROMPT="User: $*
+Assistant:"
+
 "$HOME/HQ/Codes/llama.cpp/build/bin/llama-completion" \
     -m "$MODEL" \
     -no-cnv \
-    -n 256 \
-    -p "$*" \
+    -n 128 \
+    -p "$PROMPT" \
     2>/dev/null
