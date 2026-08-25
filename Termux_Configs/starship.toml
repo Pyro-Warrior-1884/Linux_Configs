@@ -1,0 +1,32 @@
+format = """
+╭─[🔥 PyroWarrior](bold #FFA500) at [$directory](bold cyan)$git_branch$git_status$cmd_duration$time
+╰─$character
+"""
+
+[directory]
+style = "bold cyan"
+truncate_to_repo = false
+truncation_length = 3
+
+[character]
+success_symbol = "[❯](bold green) "
+error_symbol = "[❯](bold red) "
+vimcmd_symbol = "[❮](bold green) "
+
+[git_branch]
+symbol = "🌿 "
+style = "bold magenta"
+format = " [$symbol$branch]($style)"
+
+[git_status]
+style = "bold yellow"
+format = " [$all_status$ahead_behind]($style)"
+
+[cmd_duration]
+min_time = 500
+format = " [⚡ $duration](bold yellow)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = " [🕒 $time](bold bright-black)"
