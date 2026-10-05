@@ -1,0 +1,932 @@
+history
+zi
+cd .config
+ls
+cd zsh
+bat history
+bat ~/.zshenv
+lss
+bat .zshrc
+vim .zshrc
+source .zshrc
+history
+echo HI
+termux-setup-storage
+lss
+exit
+exit
+lss
+lss storage
+lss storage/shared
+cd storage/shared
+lss
+cd Notes
+lss
+pwd
+cd ~
+vim .zshenv
+cp .zshenv ~/HQ/Codes/Linux_Configs/Termux_Configs
+cd ~/HQ/Codes/Linux_Configs/Termux_Configs
+lss
+mv .zshenv zsh
+lss
+cp .vimrc ~
+cd ..
+git add .; git commit -m "feat: updated zsh configs"
+git push
+cd ~
+source .zshrc
+source ~/.config/zsh/.zshrc
+vim .zshenv
+exit
+echo $STARSHIP_CONFIG
+starship --print-config | head -20
+echo $HOME
+sshd
+whoami
+bat .zshenv
+zi
+lss
+zi
+lss
+cp starship.toml ~/.config/zsh
+cd ~
+echo hi
+lss ~/.local/bin
+spf
+echo $PHONE
+lss $PHONE
+lss $PHONE/Progress
+mv $PHONE/Progress/25-08-2026 $PHONE/Progress/24-08-2026
+vim $PHONE/Progress/25-08-2026
+cat .vimrc
+mkdir -p ~/.vim/autoload
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ls ~/.vim/autoload/plug.vim
+vim
+vim $PHONE/Progress/25-08-2026
+clear
+zi
+bat packages
+uppack nodejs
+pkg install nodejs -y
+node -v
+npm -v
+cd ..
+npm install -g opencode-termux
+npm install -g npm@12.0.2
+opencode --version
+vim $PHONE/Progress/25-08-2026
+alias
+zi
+lss
+vim aliases.zsh
+source .zshrc
+zterm
+exit
+clear
+zi
+lss
+spf
+cd ..
+git pull
+lss
+lss Fedora_Configs/Zsh_Configs/zsh
+cp ./Fedora_Configs/Zsh_Configs/zsh/repo.zsh ~/.config/zsh
+lss ~/.config/zsh
+cd ~
+lss
+lss .config/zsh
+vim .config/zsh/.zshrc
+lss
+spf
+lss
+vim repo.zsh
+zi
+cd ..
+echo $HOME
+cd ~
+echo $HOME
+pwd
+spf
+vim .zshenv
+source .zshenv
+vim .zshenv
+source .zshenv
+source $ZSHRC
+Repo -h
+pkg install jq
+spf
+bat packages
+uppack jq
+vim packages
+zi
+cd ..
+lss
+Repo --help
+Repo
+vim .zshenv
+source .zshenv
+Repo
+lss
+echo $PATH
+cp agenda ~/.local/bin
+chmod +x ~/.local/bin/agenda
+vim ~/.local/bin/agenda
+agenda
+agenda list
+cd ~
+zi
+vim $PHONE/Progress/25-08-2026
+lss $PHONE/Progress
+exit
+sshd
+lss
+bat .zshenv
+zi
+lss
+spf
+spf pl
+vim ~/.config/superfile/config.toml
+pkg install feh zathura
+pkg install x11-repo
+pkg update
+pkg install feh zathura
+pkg install termux-tools
+vim ~/.config/superfile/config.toml
+source $ZSHRC
+spf
+cd ~
+spf
+lss
+Repo
+termux-open --help
+termux-open ~/storage/downloads/sliceCIBILReportLatest.pdf
+cd ~
+lss
+lss .termux
+vim .termux/termux.properties
+termux-reload-settings
+termux-open ~/storage/downloads/sliceCIBILReportLatest.pdf
+source $ZSHRC
+termux-open ~/storage/downloads/sliceCIBILReportLatest.pdf
+echo $PHONE
+cd $PHONE
+cd ..
+lss
+spf
+cd ~
+cd $PHONE
+lss
+mkcd Matrix
+opencode
+lss
+cd ~
+cd $PHONE/Matrix
+lss
+vim market_techstack
+lss
+cd ~
+zi
+lss
+zi
+lss
+mkcd AnalyseIT
+npm create vite@latest frontend -- --template react-ts
+lss
+spf
+pkg install python
+pip --version
+python -m venv venv
+source venv/bin/activate
+pip install django
+django-admin --version
+django-admin startproject backend
+lss
+pip install djangorestframework
+history
+opencode
+zi
+cd ..
+lss
+opencode
+lss
+bat README.md
+git init
+opencode
+git add .; git commit -m "chore: created scaffolding"
+git branch -M dev
+git remote add origin git@github.com:Pyro-Warrior-1884/AnalyseIT.git
+git push -u origin dev
+git switch dev
+git switch -c test
+git push -u origin test
+git switch -c prod
+git push -u origin prod
+git switch -c albert
+git push -u origin albert
+git switch -c prod
+git switch prod
+opencode
+git add .; git commit -m "docs: updated prod readme"
+git push
+cd ..
+lss
+vim $PHONE/Progress/26-08-2026
+lss $PHONE/Progress
+Repo
+lss
+opencode
+git add .; git commit -m "docs: updated readme"
+git push
+cd ~
+exit
+lss
+zi
+spf
+btop
+pkg install htop
+pkg install btop
+exit
+sshd
+mkdir -p ~/.termux/boot
+vim ~/.termux/boot/start-sshd
+chmod +x ~/.termux/boot/start-sshd
+source $ZSHRC
+pkill sshd
+pgrep -a sshd
+~/.termux/boot/start-sshd
+pgrep -a sshd
+ss -ltn | grep 8022
+exit
+pgrep -a sshd
+ss -ltnp | grep 8022
+vim ~/.termux/boot/start-sshd
+bat ~/.termux/boot/start-sshd
+vim $PHONE/Progress/27-08-2026
+lss
+lss .termux\ 
+lss .termux
+zi
+spf
+agenda
+agenda list
+agenda add "Check Out Docker" 4
+ps -a
+lss
+zi
+zterm
+lss
+bat .zshenv
+zellij action rename-tab "Fun"
+history
+fzf
+btop
+pkg install btop
+lss
+zterm
+spf
+lss
+git switch albert
+lss
+pkg install just
+zterm
+zi
+lss
+pkg install just
+uppack just
+vim justfile
+just install
+git add .; git commit -m "feat: added justfile"
+git push
+lss
+pkg install mpd mpc
+mpd --version
+mpc --version
+mpc -v
+mkdir -p ~/.config/mpd
+vim ~/.config/mpd/mpd.conf
+cd $PHONE
+lss
+cd ..
+lss
+ls -la Songs | wc -l
+cd Songs
+pwd
+mkdir -p ~/.config/mpd/playlists
+vim ~/.config/mpd/mpd.conf
+cd ~
+mpd ~/.config/mpd/mpd.conf
+touch ~/.config/mpd/database
+touch ~/.config/mpd/log\
+touch ~/.config/mpd/state\
+touch ~/.config/mpd/sticker.sql
+vim ~/.config/mpd/mpd.conf
+killall mpd 2>/dev/null
+mpd ~/.config/mpd/mpd.conf
+mpc status
+mpc update
+mpc listall
+uppack mpd
+uppack mpc
+zi
+lss
+cd Termux_Configs
+lss
+lss ~
+lss ~/.config
+lss ~/.config/mpd
+cp ~/.config/mpd .
+cp -r ~/.config/mpd .
+lss
+cd ~
+spf
+cd $PHONE/../Songs
+zi
+z
+z Songs
+fzf
+cd ~
+mkdir -p ~/.config/pyroplayer
+touch ~/.config/pyroplayer/history\
+touch ~/.config/pyroplayer/queue\
+touch ~/.config/pyroplayer/state
+vim $PREFIX/bin/pyroplayer
+chmod +x $PREFIX/bin/pyroplayer
+pyroplayer
+vim $PREFIX/bin/pyroplayer
+pyroplayer
+pyroplayer start
+pyroplayer pause
+vim $PREFIX/bin/pyroplayer
+zterm
+pyroplayer start
+pyroplayer 
+pyroplayer pause
+pyroplayer start
+pyroplayer
+pyroplayer r
+pyroplayer n
+pyroplayer h
+pyroplayer queue
+pyroplayer pause
+pyroplayer start
+pyroplayer 
+pyroplayer n
+pyroplayer pause
+pkill -f "$PREFIX/bin/pyroplayer"
+cd ~/.config/pyroplayer
+lss
+spf
+\: > ~/.config/pyroplayer/history\
+: > ~/.config/pyroplayer/queue\
+: > ~/.config/pyroplayer/state
+pyroplayer h
+pkg install python
+vim $PREFIX/bin/pyroplayer
+pyroplayer
+pyroplayer start
+pkill -f "$PREFIX/bin/pyroplayer" 2>/dev/null
+rm -f ~/.config/pyroplayer/pyroplayer.sock
+pgrep -af pyroplayer
+vim $PREFIX/bin/pyroplayer
+pyroplayer start
+vim $PREFIX/bin/pyroplayer
+pkill -f "$PREFIX/bin/pyroplayer" 2>/dev/null
+rm -f ~/.config/pyroplayer/pyroplayer.sock
+pyroplayer start
+pyroplayer
+pyroplayer h
+pyroplayer
+pyroplayer c
+pyroplayer pause
+pyroplayer c
+pyroplayer pause
+pyroplayer queue
+pyroplayer next
+pyroplayer queue
+pyroplayer n
+pyroplayer queue
+pyroplayer h
+pyroplayer queue
+lss
+spf
+rm state
+lss
+pyroplayer
+pyroplayer queue
+pyroplayer h
+pyroplayer c
+pyroplayer n
+pyroplayer h
+bat $PREFIX/bin/pyroplayer
+pyroplayer q
+bat $PREFIX/bin/pyroplayer
+vim $PREFIX/bin/pyroplayer
+pkill -f "$PREFIX/bin/pyroplayer" 2>/dev/null
+rm -f ~/.config/pyroplayer/pyroplayer.sock
+pyroplayer start
+pyroplayer
+pyroplayer c
+pyroplayer n
+pyroplayer h
+pyroplayer next
+pyroplayer queue
+pyroplayer r
+pyroplayer p
+pyroplayer h
+pyroplayer n
+pyroplayer h
+pyroplayer queue
+pyroplayer s
+pyroplayer h
+pyroplayer q
+vim $PREFIX/bin/pyroplayer
+pyroplayer start
+pyroplayer h
+pyroplayer s
+pyroplayer h
+pyroplayer q
+vim $PREFIX/bin/pyroplayer
+pyroplayer start
+pyroplayer h
+pyroplayer q
+pkill -f "$PREFIX/bin/pyroplayer" 2>/dev/null
+rm -f ~/.config/pyroplayer/pyroplayer.sock
+pyroplayer start
+pyroplayer h
+pyroplayer q
+pkill -f "$PREFIX/bin/pyroplayer" 2>/dev/null
+rm -f ~/.config/pyroplayer/pyroplayer.sock
+vim $PREFIX/bin/pyroplayer
+pyroplayer start
+pyroplayer h
+pyroplayer queue
+pyroplayer q
+pyroplayer h
+pyroplayer queue
+bat $PREFIX/bin/pyroplayer
+cd ..
+lss
+cp -r mpd pyroplayer ~/HQ/Codes/Linux_Configs/Termux_Configs
+cp $PREFIX/bin/pyroplayer ~/HQ/Codes/Linux_Configs/Termux_Configs/pyroplayer
+cd ~/HQ/Codes/Linux_Configs/Termux_Configs
+lss
+cd ..
+git add .; git commit -m "feat: created a local music player in termux"
+git push
+exit
+pyroplayer
+pyroplayer h
+exit
+exit
+pyroplayer q
+sshd
+pyroplayer
+pyroplayer start
+pyroplayer n
+pyroplayer h
+pyroplayer 
+pyroplayer next
+pyroplayer queue
+pyroplayer 
+zi
+lss
+cd pyroplayer
+lss
+spf
+cd ..
+cp -r pyroplayer ~/HQ/Codes
+zi
+lss
+cd pyroplayer
+lss
+opencode
+rm -f history pyroplayer.lock pyroplayer.log queue pyroplayer.sock state.json
+lss
+opencode
+pyroplayer s
+opencode -s ses_fb7327032ffeH4VY4iA4j5WtHg
+lss
+git init
+git add .; git commit -m "chore: file creations"
+git branch -M main
+git remote add origin git@github.com:Pyro-Warrior-1884/PyroPlayer.git
+git push -u origin main
+pyroplayer
+pyroplayer q
+pyroplayer start
+pyroplayer h
+pyroplayer 
+pyroplayer next
+pyroplayer queue
+lss
+pyroplayer
+pyroplayer history
+pyroplayer h
+pyroplayer s
+pyroplayer h
+pyroplayer s
+pyroplayer h
+pyroplayer next
+pyroplayer queue
+pyroplayer next
+pyroplayer queue
+pyroplayer
+pyroplayer h
+pyroplayer next
+pyroplayer queue
+pyroplayer next
+pyroplayer queue
+pyroplayer q
+pyroplayer
+pyroplayer start
+pyroplayer q
+cd ~
+lss $PHONE
+cd $PHONE
+mkcd Personal
+lss
+vim Date_Ideas
+cd $PHONE
+lss
+spf
+vim Date_Ideas
+cd $PHONE
+lss
+cd Personal
+lss
+vim Github_Links
+agenda list
+agenda add "Create Youtube ad skipping tool" 1
+agenda list
+history
+lss
+pyroplayer start
+zterm
+btop
+pkg install btop
+pkg install golang
+go --version
+uppack golang
+pyroplayer q
+pyroplayer
+vim Date_Ideas
+pyroplayer
+pyroplayer start
+which pyroplayee
+which pyroplayer
+vim $PREFIX/bin/pyroplayer
+source $ZSHRC
+pyroplayer start
+cat $PREFIX/bin/pyroplayer
+pgrep -a mpd
+mpd
+pgrep -a mpd
+pyroplayer start
+clear
+pyroplayer
+pyroplayer queue
+pyroplayer next
+pyroplayer q
+mpc update
+mpc listall
+vim $ZSHRC
+zi
+lss
+spf
+vim prompt.zsh
+source $ZSHRC
+cd ~
+pyroplayer
+pyroplayer start
+pyroplayer
+pyroplayer h
+pyroplayer q
+sshd
+pgrep -a sshd
+lss $PHONE
+lss $PHONE/..
+lss $PHONE
+cd $PHONE/Matrix
+lss
+vim youtube_link
+lss
+exit
+cd $PHONE/Matrix
+vim youtube_link
+cd ~
+lss
+spf
+vim youtube_link
+bat youtube_link
+cd $PHONE/Matrix
+cd ..
+lss
+cd Personal
+ls
+vim Date_Ideas
+lss
+cd ..
+lss
+cd Progress
+lss
+cd ..
+lss
+cd Personal
+lss
+vim Date_Ideas
+cat D
+cat Date_Ideas
+vim Date_Plan
+cat Date_Ideas
+vim Date_Plan
+cat Date_Ideas
+vim Date_Plan
+cat Date_Ideas
+vim Date_Ideas
+cat Date_Plan
+vim Date_Plan
+pgrep -a sshd
+sshd
+pgrep -a sshd
+vim Date_Plan
+zterm
+vim Date_Plan
+spf
+cd $PHONE
+spf
+lss
+vim Date_Plan
+cat Date_Plan
+vim Date_Plan
+vim Date_Ideas
+vim Date_Plan
+vim Date_Ideas
+vim Date_Plan
+vim Date_Ideas
+sshd
+lss
+cat .termux_authinfo
+cat .vimrc
+lss
+spf
+zi
+spf
+lss
+spf
+vim .vimrc
+zi
+vim test_plug
+cd ~
+vim .vimrc
+zi
+vim test_plug
+spf
+vim plug.vim
+spf
+vim
+zi
+vim test_plug
+zi
+lss
+cat Apartment
+rm Apartment
+lss
+cd Personal
+lsw
+lss
+cat Github_Links
+sshd
+spf
+pyroplayer start
+lss
+cd Matrix
+lss
+cd ~
+lss
+cat Date_Plan
+rm Date_Plan
+cd HQ
+lss
+agenda list
+pyroplayer
+pyroplayer n
+pyroplayer queue
+pyroplayer q
+rm Date_Plan
+lss
+sshd
+lss
+echo "hello" | termux-clipboard-set
+pkg install termux-api
+echo "hello" | termux-clipboard-set
+termux-clipboard-get
+which termux-clipboard-get
+pkg in
+pkg list-installed | grep termux-api
+termux-clipboard-set "hello"
+timeout 5 termux-clipboard-get
+echo $?
+termux-api-start
+echo "hello" | termux-clipboard-set
+termux-clipboard-get
+lss
+spf
+cd ..
+lss
+mkcd PyroVault
+opencode
+bash -lc 'echo hello && pwd && ls'
+o "$SHELL"
+echo "$PREFIX"
+echo "$PATH"
+echo "$SHELL"
+opencode --version
+which opencode
+echo "$SHELL"
+echo "$PATH"
+zsh -c 'echo hello'
+zsh -c 'pwd && ls'
+sh -c 'echo hello'
+bash -c 'echo hello'
+env -i HOME="$HOME" PATH="$PREFIX/bin:$HOME/.local/bin" PREFIX="$PREFIX" SHELL="$PREFIX/bin/zsh" opencode -s ses_efc993055ffeClpkTnsILPs0uw
+ls -ld /tmp
+echo "$TMPDIR"
+ls -ld "$TMPDIR"
+cd ../Bored
+TMPDIR="$TMPDIR" opencode
+env -i \\
+HOME="$HOME" \\
+PATH="$PREFIX/bin:$HOME/.local/bin" \\
+PREFIX="$PREFIX" \\
+TMPDIR="$PREFIX/tmp" \\
+TEMP="$PREFIX/tmp" \\
+TMP="$PREFIX/tmp" \\
+SHELL="$PREFIX/bin/zsh" \\
+opencode
+cd ../PyroVault
+cat opencode.json 2>/dev/null
+lss
+ls -la
+TMPDIR="$PREFIX/tmp" opencode --print-logs --log-level DEBUG
+opencode
+curl -I --max-time 10 https://opencode.ai
+curl -I --max-time 10 https://opencode.ai/zen/v1/models
+curl -sS --max-time 10 https://opencode.ai/zen/v1/models | head
+ping -c 3 opencode.ai
+bun --version
+: 1791060405:0;bun -e 'fetch("https://opencode.ai/zen/v1/models").then(r => console.log("HTTP", r.status)).catch(e => console.error(e))'
+: 1791060462:0;which opencode
+: 1791060470:0;file "$(which opencode)"
+: 1791060476:0;head -30 "$(which opencode)"
+: 1791060535:0;file ~/.opencode/opencode
+: 1791060539:0;~/.opencode/opencode --version
+: 1791060556:0;ldd ~/.opencode/opencode 2>&1 | head -30
+: 1791060573:0;pkg install ldd
+: 1791060614:0;ldd ~/.opencode/opencode 2>&1 | head -30
+: 1791060619:0;ls -lh ~/.opencode/
+: 1791060631:0;npm view opencode-termux version
+: 1791060642:0;npm view opencode-termux dist-tags --json
+: 1791060739:0;env | grep -E 'LD_PRELOAD|LD_LIBRARY_PATH'
+: 1791060748:0;echo "$LD_PRELOAD"
+: 1791060759:0;echo "LD_PRELOAD=$LD_PRELOAD"\
+echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+: 1791060763:0;termux-info
+: 1791060849:0;env -u LD_PRELOAD \\
+  LD_LIBRARY_PATH="$HOME/.opencode" \\
+  "$HOME/.opencode/ld-musl-aarch64.so.1" \\
+  "$HOME/.opencode/opencode" \\
+  --version
+: 1791060962:0;env -u LD_PRELOAD \\
+  LD_LIBRARY_PATH="$HOME/.opencode" \\
+  "$HOME/.opencode/ld-musl-aarch64.so.1" \\
+  "$HOME/.opencode/opencode"
+: 1791061058:0;zi
+: 1791061061:0;env -u LD_PRELOAD TMPDIR="$PREFIX/tmp" opencode
+: 1791061117:0;env -u LD_PRELOAD \\
+  LD_LIBRARY_PATH="$HOME/.opencode" \\
+  "$HOME/.opencode/ld-musl-aarch64.so.1" \\
+  "$HOME/.opencode/opencode"
+: 1791061227:0;zi
+: 1791061233:0;lss
+: 1791061238:0;vim aliases.zsh
+: 1791061256:0;source $ZSHRC
+: 1791061263:0;type opencode
+: 1791061273:0;opencode --version
+: 1791061281:0;zi
+: 1791061288:0;opencode
+: 1791061315:0;cd ../PyroVault
+: 1791061343:0;opencode
+: 1791061370:0;lss
+: 1791061373:0;opencode
+: 1791063204:0;pyroplayer start
+: 1791064772:0;lss
+: 1791064777:0;cat install.sh
+: 1791064825:0;lss
+: 1791064832:0;cd bin
+: 1791064833:0;lss
+: 1791064842:0;vault
+: 1791064862:0;vault init
+: 1791064900:0;vault add
+: 1791064907:0;vault unlock
+: 1791064915:0;vault add
+: 1791064942:0;vault show
+: 1791064976:0;source $ZSHRC
+: 1791064989:0;vault status
+: 1791064997:0;vault show
+: 1791065029:0;cd ..
+: 1791065047:0;opencode -s ses_efc6c1fbdffewGTZPR7wM0uao
+: 1791065083:0;opencode -s ses_efc6c1fbdffewGTZPR7wM0uaon
+: 1791065144:0;zi
+: 1791065149:0;opencode -s ses_efc6c1fbdffewGTZPR7wM0uaon
+: 1791065249:0;zi
+: 1791065261:0;vault show
+: 1791065320:0;termux-clipboard-get "hello"
+: 1791065342:0;echo "hello" | termux-clipboard-set
+: 1791065364:0;termux-api-start
+: 1791065373:0;echo "hello" | termux-clipboard-set
+: 1791065387:0;vault status
+: 1791065393:0;vault show
+: 1791065408:0;vault
+: 1791065416:0;vault edit
+: 1791065432:0;vault show
+: 1791065449:0;cat install.sh
+: 1791065550:0;lss $PREFIX/bin
+: 1791065572:0;lss
+: 1791065575:0;spf
+: 1791065686:0;git init
+: 1791065736:0;git add .; git commit -m "feat: Vault version 1"
+: 1791065749:0;git branch -M main
+: 1791065756:0;git remote add origin https://github.com/Pyro-Warrior-1884/Vault.git
+: 1791065767:0;git push -u origin main
+: 1791065884:0;git remote set-url origin git@github.com:Pyro-Warrior-1884/Vault.git
+: 1791065887:0;git push -u origin main
+: 1791066080:0;zi
+: 1791066089:0;touch LICENSE
+: 1791066097:0;vim LICENSE
+: 1791066141:0;git add .; git commit -m "feat: Added License"
+: 1791066144:0;git push
+: 1791136023:0;clear
+: 1791136030:0;cd ~
+: 1791136036:0;vault
+: 1791136051:0;vault unlock
+: 1791136063:0;vault show
+: 1791136084:0;termux-api-start
+: 1791136088:0;vault show
+: 1791136110:0;vault add
+: 1791136137:0;vault show
+: 1791136171:0;vault lock
+: 1791136177:0;vault add
+: 1791136197:0;vim $ZSHRC
+: 1791136220:0;zi
+: 1791136225:0;lss
+: 1791136238:0;cat prompt.zsh
+: 1791136245:0;vim $ZSHRC
+: 1791136254:0;vim prompt.zsh
+: 1791136334:0;vim $ZSHRC
+: 1791136372:0;source $ZSHRC
+: 1791136419:0;cd ..
+: 1791140476:0;cd $PHONE
+: 1791140484:0;cd Personal
+: 1791140486:0;lss
+: 1791140490:0;vim things
+: 1791144319:0;cd ~
+: 1791144321:0;lss
+: 1791144358:0;cd $
+: 1791144365:0;cd $PHONE
+: 1791144367:0;lss
+: 1791144369:0;cd ..
+: 1791144371:0;lss
+: 1791144380:0;lss Download
+: 1791144420:0;mv Download/Money.xlsx Notes/Personal
+: 1791144421:0;lss
+: 1791144432:0;cd Notes
+: 1791144438:0;cd Personal
+: 1791144439:0;lss
+: 1791145142:0;sshd
+: 1791145224:0;cd $PHONE
+: 1791145228:0;cd Personal
+: 1791145230:0;lss
+: 1791145572:0;cd $PHONE
+: 1791145577:0;cd Personal
+: 1791145611:0;scp Money.xlsx things alberts-laptop@100.89.138.37:/Desktop/Personal/NoteS
+: 1791145862:0;scp Money.xlsx things alberts-laptop@100.89.138.37:/Desktop/Personal/Notes
+: 1791145975:0;scp Money.xlsx things the_pyro_warrior@100.89.138.37:/Desktop/Personal/Notes
+: 1791146026:0;scp Money.xlsx things the_pyro_warrior@100.89.138.37:/home/the_pyro_warrior/Desktop/Personal/Notes
+: 1791156364:0;cd Personal
+: 1791156368:0;lss
+: 1791156380:0;vim birthday
+: 1791159580:0;zi
+: 1791159589:0;cd ..
+: 1791159591:0;lss
+: 1791159599:0;spf
+: 1791159636:0;cp ~/.vimrc .
+: 1791159638:0;lss
+: 1791159666:0;git add .; git commit -m "feat: updated vim file"
+: 1791159671:0;git push
+: 1791159713:0;lss ~/.local/bin
+: 1791159735:0;lss
+: 1791159758:0;cp ~/.config/zsh .
+: 1791159766:0;cp -r ~/.config/zsh .

@@ -1,4 +1,4 @@
-HISTFILE="$XDG_STATE_HOME/zsh/history"
+HISTFILE="$HOME/.config/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
 
@@ -34,6 +34,8 @@ source "$ZDOTDIR/plugins.zsh"
 source "$ZDOTDIR/prompt.zsh"
 
 source "$ZDOTDIR/cd_on_quit.zsh"
+
+source "$ZDOTDIR/repo.zsh"
 
 clear
 toilet -f future -F metal -F border "Albert is Here!"
